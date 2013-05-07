@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD']=='POST') {
         case 12: $sql = "SELECT * FROM articles ORDER BY published_date DESC LIMIT 3";
             break;
         case 13: $sql = "SELECT a.id, a.title, a.text, u.user_id, u.first_name, u.age
-         FROM articles a JOIN users u ON a.user_id=u.user_id where (u.first_name='frank') or (u.first_name='jason') or (u.first_name<>'peter')";
+         FROM articles a JOIN users u ON a.user_id=u.user_id where (u.first_name='frank' or u.first_name='jason') and (u.first_name<>'peter')";
             break;
         case 14: $sql = "SELECT a.id, a.title, a.text, u.user_id, u.first_name, u.age
          FROM articles a JOIN users u ON a.user_id=u.user_id where (a.text LIKE '%product%') and (u.age>30)";

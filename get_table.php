@@ -1,6 +1,5 @@
 <?php
 function getTable($sql_result){
-    if(mysql_fetch_assoc($sql_result))
     $html ="";
     $html.= "<table border='1' >";
     $i = 0;
